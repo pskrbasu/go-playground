@@ -1,2 +1,2 @@
 # cgo-test
-a sample cgo program
+go testing
