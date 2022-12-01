@@ -1,677 +1,132 @@
 {
   "schema_version": "20220929",
   "panels": {
-    "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_0": {
-      "name": "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_0",
-      "width": 2,
-      "sql": "select count(*) as \"Instances\" from aws_ec2_instance\n",
+    "sibling_containers_report.chart.container_dashboard_sibling_containers_report_anonymous_container_0_anonymous_chart_0": {
+      "name": "sibling_containers_report.chart.container_dashboard_sibling_containers_report_anonymous_container_0_anonymous_chart_0",
+      "title": "container 1 chart 1",
+      "sql": "select 1 as container",
       "data": {
         "columns": [
           {
-            "name": "Instances",
-            "data_type": "INT8"
+            "name": "container",
+            "data_type": "INT4"
           }
         ],
         "rows": [
           {
-            "Instances": 2
-          }
-        ]
-      },
-      "properties": {},
-      "panel_type": "card",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    card {\n      sql   = query.aws_ec2_instance_count.sql\n      width = 2\n    }"
-    },
-    "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_1": {
-      "name": "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_1",
-      "width": 2,
-      "sql": "select\n  sum(cpu_options_core_count) as \"Total Cores\"\nfrom\n  aws_ec2_instance as i\n",
-      "data": {
-        "columns": [
-          {
-            "name": "Total Cores",
-            "data_type": "NUMERIC"
-          }
-        ],
-        "rows": [
-          {
-            "Total Cores": 3
-          }
-        ]
-      },
-      "properties": {},
-      "panel_type": "card",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    card {\n      sql   = query.aws_ec2_instance_total_cores.sql\n      width = 2\n    }"
-    },
-    "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_2": {
-      "name": "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_2",
-      "width": 2,
-      "sql": "select\n  count(*) as value,\n  'Publicly Accessible' as label,\n  case count(*) when 0 then 'ok' else 'alert' end as \"type\"\nfrom\n  aws_ec2_instance\nwhere\n  public_ip_address is not null\n",
-      "data": {
-        "columns": [
-          {
-            "name": "value",
-            "data_type": "INT8"
-          },
-          {
-            "name": "label",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "type",
-            "data_type": "TEXT"
-          }
-        ],
-        "rows": [
-          {
-            "label": "Publicly Accessible",
-            "type": "ok",
-            "value": 0
-          }
-        ]
-      },
-      "properties": {
-        "href": "/aws_insights.dashboard.aws_ec2_instance_public_access_report"
-      },
-      "panel_type": "card",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    card {\n      sql   = query.aws_ec2_public_instance_count.sql\n      width = 2\n      href  = dashboard.aws_ec2_instance_public_access_report.url_path\n    }"
-    },
-    "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_3": {
-      "name": "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_3",
-      "width": 2,
-      "sql": "select\n  count(*) as value,\n  'EBS Not Optimized' as label,\n  case count(*) when 0 then 'ok' else 'alert' end as \"type\"\nfrom\n  aws_ec2_instance\nwhere\n  not ebs_optimized\n",
-      "data": {
-        "columns": [
-          {
-            "name": "value",
-            "data_type": "INT8"
-          },
-          {
-            "name": "label",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "type",
-            "data_type": "TEXT"
-          }
-        ],
-        "rows": [
-          {
-            "label": "EBS Not Optimized",
-            "type": "alert",
-            "value": 1
-          }
-        ]
-      },
-      "properties": {},
-      "panel_type": "card",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    card {\n      sql   = query.aws_ec2_ebs_optimized_count.sql\n      width = 2\n    }"
-    },
-    "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_4": {
-      "name": "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_4",
-      "width": 2,
-      "display_type": "info",
-      "sql": "select\n  'Cost - MTD' as label,\n  sum(unblended_cost_amount)::numeric::money as value\nfrom\n  aws_cost_by_service_monthly\nwhere\n  service = 'Amazon Elastic Compute Cloud - Compute'\n  and period_end \u003e date_trunc('month', CURRENT_DATE::timestamp)\n",
-      "data": {
-        "columns": [
-          {
-            "name": "label",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "value",
-            "data_type": "790"
-          }
-        ],
-        "rows": [
-          {
-            "label": "Cost - MTD",
-            "value": "$1.99"
-          }
-        ]
-      },
-      "properties": {
-        "icon": "currency-dollar"
-      },
-      "panel_type": "card",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    card {\n      type  = \"info\"\n      icon  = \"currency-dollar\"\n      sql   = query.aws_ec2_instance_cost_mtd.sql\n      width = 2\n    }"
-    },
-    "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_1_anonymous_chart_0": {
-      "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_1_anonymous_chart_0",
-      "title": "Public/Private",
-      "width": 4,
-      "display_type": "donut",
-      "sql": "with instances as (\n  select\n    case\n      when public_ip_address is null then 'private'\n      else 'public'\n    end as visibility\n  from\n    aws_ec2_instance\n)\nselect\n  visibility,\n  count(*)\nfrom\n  instances\ngroup by\n  visibility\n",
-      "data": {
-        "columns": [
-          {
-            "name": "visibility",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "count",
-            "data_type": "INT8"
-          }
-        ],
-        "rows": [
-          {
-            "count": 2,
-            "visibility": "private"
-          }
-        ]
-      },
-      "properties": {
-        "series": {
-          "count": {
-            "name": "count",
-            "points": {
-              "private": {
-                "color": "ok"
-              },
-              "public": {
-                "color": "alert"
-              }
-            }
-          }
-        }
-      },
-      "panel_type": "chart",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    chart {\n      title = \"Public/Private\"\n      sql   = query.aws_ec2_instance_by_public_ip.sql\n      type  = \"donut\"\n      width = 4\n\n      series \"count\" {\n        point \"private\" {\n          color = \"ok\"\n        }\n        point \"public\" {\n          color = \"alert\"\n        }\n      }\n    }"
-    },
-    "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_1_anonymous_chart_1": {
-      "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_1_anonymous_chart_1",
-      "title": "EBS Optimized Status",
-      "width": 4,
-      "display_type": "donut",
-      "sql": "with instances as (\n  select\n    case\n      when ebs_optimized then 'enabled'\n      else 'disabled'\n    end as visibility\n  from\n    aws_ec2_instance\n)\nselect\n  visibility,\n  count(*)\nfrom\n  instances\ngroup by\n  visibility\n",
-      "data": {
-        "columns": [
-          {
-            "name": "visibility",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "count",
-            "data_type": "INT8"
-          }
-        ],
-        "rows": [
-          {
-            "count": 1,
-            "visibility": "disabled"
-          },
-          {
-            "count": 1,
-            "visibility": "enabled"
-          }
-        ]
-      },
-      "properties": {
-        "series": {
-          "count": {
-            "name": "count",
-            "points": {
-              "disabled": {
-                "color": "alert"
-              },
-              "enabled": {
-                "color": "ok"
-              }
-            }
-          }
-        }
-      },
-      "panel_type": "chart",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    chart {\n      title = \"EBS Optimized Status\"\n      sql   = query.aws_ec2_instance_ebs_optimized_status.sql\n      type  = \"donut\"\n      width = 4\n\n      series \"count\" {\n        point \"enabled\" {\n          color = \"ok\"\n        }\n        point \"disabled\" {\n          color = \"alert\"\n        }\n      }\n    }"
-    },
-    "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_1_anonymous_chart_2": {
-      "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_1_anonymous_chart_2",
-      "title": "Detailed Monitoring Status",
-      "width": 4,
-      "display_type": "donut",
-      "sql": "with instances as (\n  select\n    case\n      when monitoring_state = 'enabled' then 'enabled'\n      else 'disabled'\n    end as visibility\n  from\n    aws_ec2_instance\n)\nselect\n  visibility,\n  count(*)\nfrom\n  instances\ngroup by\n  visibility\n",
-      "data": {
-        "columns": [
-          {
-            "name": "visibility",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "count",
-            "data_type": "INT8"
-          }
-        ],
-        "rows": [
-          {
-            "count": 2,
-            "visibility": "disabled"
-          }
-        ]
-      },
-      "properties": {
-        "series": {
-          "count": {
-            "name": "count",
-            "points": {
-              "disabled": {
-                "color": "alert"
-              },
-              "enabled": {
-                "color": "ok"
-              }
-            }
-          }
-        }
-      },
-      "panel_type": "chart",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    chart {\n      title = \"Detailed Monitoring Status\"\n      sql   = query.aws_ec2_instance_detailed_monitoring_enabled.sql\n      type  = \"donut\"\n      width = 4\n\n      series \"count\" {\n        point \"enabled\" {\n          color = \"ok\"\n        }\n        point \"disabled\" {\n          color = \"alert\"\n        }\n      }\n    }"
-    },
-    "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_2_anonymous_chart_0": {
-      "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_2_anonymous_chart_0",
-      "title": "EC2 Compute Monthly Unblended Cost",
-      "width": 6,
-      "display_type": "column",
-      "sql": "select\n  to_char(period_start, 'Mon-YY') as \"Month\",\n  sum(unblended_cost_amount)::numeric as \"Unblended Cost\"\nfrom\n  aws_cost_by_service_usage_type_monthly\nwhere\n  service = 'Amazon Elastic Compute Cloud - Compute'\ngroup by\n  period_start\norder by\n  period_start\n",
-      "data": {
-        "columns": [
-          {
-            "name": "Month",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "Unblended Cost",
-            "data_type": "NUMERIC"
-          }
-        ],
-        "rows": [
-          {
-            "Month": "Mar-22",
-            "Unblended Cost": 0.61130487
-          },
-          {
-            "Month": "Apr-22",
-            "Unblended Cost": 3.3065362112
-          },
-          {
-            "Month": "May-22",
-            "Unblended Cost": 2.1177133416
-          },
-          {
-            "Month": "Jun-22",
-            "Unblended Cost": 0
-          },
-          {
-            "Month": "Jul-22",
-            "Unblended Cost": 147.8473266773
-          },
-          {
-            "Month": "Aug-22",
-            "Unblended Cost": 0.905396387
-          },
-          {
-            "Month": "Sep-22",
-            "Unblended Cost": 0
-          },
-          {
-            "Month": "Oct-22",
-            "Unblended Cost": 1.2155943544
-          },
-          {
-            "Month": "Nov-22",
-            "Unblended Cost": 1.9935475795
+            "container": 1
           }
         ]
       },
       "properties": {},
       "panel_type": "chart",
       "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    chart {\n      width = 6\n      title = \"EC2 Compute Monthly Unblended Cost\"\n      type  = \"column\"\n      sql   = query.aws_ec2_instance_cost_per_month.sql\n    }"
+      "dashboard": "dashboard.sibling_containers_report",
+      "source_definition": "    chart {\n      title = \"container 1 chart 1\"\n      sql = \"select 1 as container\"\n    }"
     },
-    "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_0": {
-      "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_0",
-      "title": "Instances by Account",
-      "width": 4,
-      "display_type": "column",
-      "sql": "select\n  a.title as \"account\",\n  count(i.*) as \"total\"\nfrom\n  aws_ec2_instance as i,\n  aws_account as a\nwhere\n  a.account_id = i.account_id\ngroup by\n  account\norder by count(i.*) desc\n",
+    "sibling_containers_report.chart.container_dashboard_sibling_containers_report_anonymous_container_1_anonymous_chart_0": {
+      "name": "sibling_containers_report.chart.container_dashboard_sibling_containers_report_anonymous_container_1_anonymous_chart_0",
+      "title": "container 2 chart 1",
+      "sql": "select 2 as container",
       "data": {
         "columns": [
           {
-            "name": "account",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "total",
-            "data_type": "INT8"
+            "name": "container",
+            "data_type": "INT4"
           }
         ],
         "rows": [
           {
-            "account": "redhood-aaa",
-            "total": 2
+            "container": 2
           }
         ]
       },
       "properties": {},
       "panel_type": "chart",
       "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    chart {\n      title = \"Instances by Account\"\n      sql   = query.aws_ec2_instance_by_account.sql\n      type  = \"column\"\n      width = 4\n    }"
+      "dashboard": "dashboard.sibling_containers_report",
+      "source_definition": "    chart {\n      title = \"container 2 chart 1\"\n      sql = \"select 2 as container\"\n    }"
     },
-    "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_1": {
-      "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_1",
-      "title": "Instances by Region",
-      "width": 4,
-      "display_type": "column",
-      "sql": "select\n  region,\n  count(i.*) as total\nfrom\n  aws_ec2_instance as i\ngroup by\n  region\n",
+    "sibling_containers_report.chart.container_dashboard_sibling_containers_report_anonymous_container_2_anonymous_chart_0": {
+      "name": "sibling_containers_report.chart.container_dashboard_sibling_containers_report_anonymous_container_2_anonymous_chart_0",
+      "title": "container 3 chart 1",
+      "sql": "select 3 as container",
       "data": {
         "columns": [
           {
-            "name": "region",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "total",
-            "data_type": "INT8"
+            "name": "container",
+            "data_type": "INT4"
           }
         ],
         "rows": [
           {
-            "region": "ap-south-1",
-            "total": 2
+            "container": 3
           }
         ]
       },
       "properties": {},
       "panel_type": "chart",
       "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    chart {\n      title = \"Instances by Region\"\n      sql   = query.aws_ec2_instance_by_region.sql\n      type  = \"column\"\n      width = 4\n    }"
+      "dashboard": "dashboard.sibling_containers_report",
+      "source_definition": "    chart {\n      title = \"container 3 chart 1\"\n      sql = \"select 3 as container\"\n    }"
     },
-    "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_2": {
-      "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_2",
-      "title": "Instances by State",
-      "width": 4,
-      "display_type": "column",
-      "sql": "select\n  instance_state,\n  count(instance_state)\nfrom\n  aws_ec2_instance\ngroup by\n  instance_state\n",
-      "data": {
-        "columns": [
-          {
-            "name": "instance_state",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "count",
-            "data_type": "INT8"
-          }
-        ],
-        "rows": [
-          {
-            "count": 2,
-            "instance_state": "stopped"
-          }
-        ]
-      },
-      "properties": {},
-      "panel_type": "chart",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    chart {\n      title = \"Instances by State\"\n      sql   = query.aws_ec2_instance_by_state.sql\n      type  = \"column\"\n      width = 4\n    }"
-    },
-    "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_3": {
-      "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_3",
-      "title": "Instances by Age",
-      "width": 4,
-      "display_type": "column",
-      "sql": "with instances as (\n  select\n    title,\n    launch_time,\n    to_char(launch_time,\n      'YYYY-MM') as creation_month\n  from\n    aws_ec2_instance\n),\nmonths as (\n  select\n    to_char(d,\n      'YYYY-MM') as month\n  from\n    generate_series(date_trunc('month',\n        (\n          select\n            min(launch_time)\n            from instances)),\n        date_trunc('month',\n          current_date),\n        interval '1 month') as d\n),\ninstances_by_month as (\n  select\n    creation_month,\n    count(*)\n  from\n    instances\n  group by\n    creation_month\n)\nselect\n  months.month,\n  instances_by_month.count\nfrom\n  months\n  left join instances_by_month on months.month = instances_by_month.creation_month\norder by\n  months.month;\n",
-      "data": {
-        "columns": [
-          {
-            "name": "month",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "count",
-            "data_type": "INT8"
-          }
-        ],
-        "rows": [
-          {
-            "count": 2,
-            "month": "2022-11"
-          }
-        ]
-      },
-      "properties": {},
-      "panel_type": "chart",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    chart {\n      title = \"Instances by Age\"\n      sql   = query.aws_ec2_instance_by_creation_month.sql\n      type  = \"column\"\n      width = 4\n    }"
-    },
-    "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_4": {
-      "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_4",
-      "title": "Instances by Type",
-      "width": 4,
-      "display_type": "column",
-      "sql": "select instance_type as \"Type\", count(*) as \"instances\" from aws_ec2_instance group by instance_type order by instance_type\n",
-      "data": {
-        "columns": [
-          {
-            "name": "Type",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "instances",
-            "data_type": "INT8"
-          }
-        ],
-        "rows": [
-          {
-            "Type": "t2.micro",
-            "instances": 1
-          },
-          {
-            "Type": "t4g.small",
-            "instances": 1
-          }
-        ]
-      },
-      "properties": {},
-      "panel_type": "chart",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    chart {\n      title = \"Instances by Type\"\n      sql   = query.aws_ec2_instance_by_type.sql\n      type  = \"column\"\n      width = 4\n    }"
-    },
-    "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_4_anonymous_chart_0": {
-      "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_4_anonymous_chart_0",
-      "title": "Top 10 CPU - Last 7 days",
-      "width": 6,
-      "display_type": "line",
-      "sql": "  with top_n as (\n  select\n    instance_id,\n    avg(average)\n  from\n    aws_ec2_instance_metric_cpu_utilization_daily\n  where\n    timestamp  \u003e= CURRENT_DATE - INTERVAL '7 day'\n  group by\n    instance_id\n  order by\n    avg desc\n  limit 10\n)\nselect\n    timestamp,\n    instance_id,\n    average\n  from\n    aws_ec2_instance_metric_cpu_utilization_hourly\n  where\n    timestamp  \u003e= CURRENT_DATE - INTERVAL '7 day'\n    and instance_id in (select instance_id from top_n)\n  order by\n    timestamp\n",
-      "data": {
-        "columns": [
-          {
-            "name": "timestamp",
-            "data_type": "TIMESTAMPTZ"
-          },
-          {
-            "name": "instance_id",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "average",
-            "data_type": "FLOAT8"
-          }
-        ],
-        "rows": [
-          {
-            "average": 3.343311684929404,
-            "instance_id": "i-059a0baa5fb90a263",
-            "timestamp": "2022-11-25T20:50:00+05:30"
-          }
-        ]
-      },
-      "properties": {},
-      "panel_type": "chart",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    chart {\n      title = \"Top 10 CPU - Last 7 days\"\n      sql   = query.aws_ec2_top10_cpu_past_week.sql\n      type  = \"line\"\n      width = 6\n    }"
-    },
-    "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_4_anonymous_chart_1": {
-      "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_4_anonymous_chart_1",
-      "title": "Average Max Daily CPU - Last 30 days",
-      "width": 6,
-      "display_type": "column",
-      "sql": "with cpu_buckets as (\n  select\nunnest(array ['Unused (\u003c1%)','Underutilized (1-10%)','Right-sized (10-90%)', 'Overutilized (\u003e90%)' ]) as cpu_bucket\n),\nmax_averages as (\n  select\n    instance_id,\n    case\n      when max(average) \u003c= 1 then 'Unused (\u003c1%)'\n      when max(average) between 1 and 10 then 'Underutilized (1-10%)'\n      when max(average) between 10 and 90 then 'Right-sized (10-90%)'\n      when max(average) \u003e 90 then 'Overutilized (\u003e90%)'\n    end as cpu_bucket,\n    max(average) as max_avg\n  from\n    aws_ec2_instance_metric_cpu_utilization_daily\n  where\n    date_part('day', now() - timestamp) \u003c= 30\n  group by\n    instance_id\n)\nselect\n  b.cpu_bucket as \"CPU Utilization\",\n  count(a.*)\nfrom\n  cpu_buckets as b\nleft join max_averages as a on b.cpu_bucket = a.cpu_bucket\ngroup by\n  b.cpu_bucket\n",
-      "data": {
-        "columns": [
-          {
-            "name": "CPU Utilization",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "count",
-            "data_type": "INT8"
-          }
-        ],
-        "rows": [
-          {
-            "CPU Utilization": "Overutilized (\u003e90%)",
-            "count": 0
-          },
-          {
-            "CPU Utilization": "Right-sized (10-90%)",
-            "count": 0
-          },
-          {
-            "CPU Utilization": "Underutilized (1-10%)",
-            "count": 2
-          },
-          {
-            "CPU Utilization": "Unused (\u003c1%)",
-            "count": 0
-          }
-        ]
-      },
-      "properties": {},
-      "panel_type": "chart",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    chart {\n      title = \"Average Max Daily CPU - Last 30 days\"\n      sql   = query.aws_ec2_instance_by_cpu_utilization_category.sql\n      type  = \"column\"\n      width = 6\n    }"
-    },
-    "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_0": {
-      "name": "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_0",
+    "sibling_containers_report.container.dashboard_sibling_containers_report_anonymous_container_0": {
+      "name": "sibling_containers_report.container.dashboard_sibling_containers_report_anonymous_container_0",
       "panel_type": "container",
       "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "  container {\n\n    # Analysis\n    card {\n      sql   = query.aws_ec2_instance_count.sql\n      width = 2\n    }\n\n    card {\n      sql   = query.aws_ec2_instance_total_cores.sql\n      width = 2\n    }\n\n    # Assessments\n    card {\n      sql   = query.aws_ec2_public_instance_count.sql\n      width = 2\n      href  = dashboard.aws_ec2_instance_public_access_report.url_path\n    }\n\n    card {\n      sql   = query.aws_ec2_ebs_optimized_count.sql\n      width = 2\n    }\n\n    # Costs\n    card {\n      type  = \"info\"\n      icon  = \"currency-dollar\"\n      sql   = query.aws_ec2_instance_cost_mtd.sql\n      width = 2\n    }\n\n  }"
+      "dashboard": "dashboard.sibling_containers_report",
+      "source_definition": "  container {\n    text {\n      value = \"container 1\"\n    }\n    chart {\n      title = \"container 1 chart 1\"\n      sql = \"select 1 as container\"\n    }\n  }"
     },
-    "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_1": {
-      "name": "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_1",
-      "title": "Assessments",
-      "width": 6,
+    "sibling_containers_report.container.dashboard_sibling_containers_report_anonymous_container_1": {
+      "name": "sibling_containers_report.container.dashboard_sibling_containers_report_anonymous_container_1",
       "panel_type": "container",
       "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "  container {\n\n    title = \"Assessments\"\n    width = 6\n\n    chart {\n      title = \"Public/Private\"\n      sql   = query.aws_ec2_instance_by_public_ip.sql\n      type  = \"donut\"\n      width = 4\n\n      series \"count\" {\n        point \"private\" {\n          color = \"ok\"\n        }\n        point \"public\" {\n          color = \"alert\"\n        }\n      }\n    }\n\n    chart {\n      title = \"EBS Optimized Status\"\n      sql   = query.aws_ec2_instance_ebs_optimized_status.sql\n      type  = \"donut\"\n      width = 4\n\n      series \"count\" {\n        point \"enabled\" {\n          color = \"ok\"\n        }\n        point \"disabled\" {\n          color = \"alert\"\n        }\n      }\n    }\n\n    chart {\n      title = \"Detailed Monitoring Status\"\n      sql   = query.aws_ec2_instance_detailed_monitoring_enabled.sql\n      type  = \"donut\"\n      width = 4\n\n      series \"count\" {\n        point \"enabled\" {\n          color = \"ok\"\n        }\n        point \"disabled\" {\n          color = \"alert\"\n        }\n      }\n    }\n  }"
+      "dashboard": "dashboard.sibling_containers_report",
+      "source_definition": "  container {\n    text {\n      value = \"container 2\"\n    }\n    chart {\n      title = \"container 2 chart 1\"\n      sql = \"select 2 as container\"\n    }\n  }"
     },
-    "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_2": {
-      "name": "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_2",
-      "title": "Costs",
-      "width": 6,
+    "sibling_containers_report.container.dashboard_sibling_containers_report_anonymous_container_2": {
+      "name": "sibling_containers_report.container.dashboard_sibling_containers_report_anonymous_container_2",
       "panel_type": "container",
       "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "  container {\n\n    title = \"Costs\"\n    width = 6\n\n\n    table {\n      width = 6\n      title = \"Forecast\"\n      sql   = query.aws_ec2_monthly_forecast_table.sql\n    }\n\n    chart {\n      width = 6\n      title = \"EC2 Compute Monthly Unblended Cost\"\n      type  = \"column\"\n      sql   = query.aws_ec2_instance_cost_per_month.sql\n    }\n\n  }"
+      "dashboard": "dashboard.sibling_containers_report",
+      "source_definition": "  container {\n    text {\n      value = \"container 3\"\n    }\n    chart {\n      title = \"container 3 chart 1\"\n      sql = \"select 3 as container\"\n    }\n  }"
     },
-    "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_3": {
-      "name": "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_3",
-      "title": "Analysis",
-      "panel_type": "container",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "  container {\n\n    title = \"Analysis\"\n\n    chart {\n      title = \"Instances by Account\"\n      sql   = query.aws_ec2_instance_by_account.sql\n      type  = \"column\"\n      width = 4\n    }\n\n    chart {\n      title = \"Instances by Region\"\n      sql   = query.aws_ec2_instance_by_region.sql\n      type  = \"column\"\n      width = 4\n    }\n\n    chart {\n      title = \"Instances by State\"\n      sql   = query.aws_ec2_instance_by_state.sql\n      type  = \"column\"\n      width = 4\n    }\n\n    chart {\n      title = \"Instances by Age\"\n      sql   = query.aws_ec2_instance_by_creation_month.sql\n      type  = \"column\"\n      width = 4\n    }\n\n    chart {\n      title = \"Instances by Type\"\n      sql   = query.aws_ec2_instance_by_type.sql\n      type  = \"column\"\n      width = 4\n    }\n\n  }"
-    },
-    "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_4": {
-      "name": "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_4",
-      "title": "Performance \u0026 Utilization",
-      "panel_type": "container",
-      "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "  container {\n\n    title = \"Performance \u0026 Utilization\"\n\n    chart {\n      title = \"Top 10 CPU - Last 7 days\"\n      sql   = query.aws_ec2_top10_cpu_past_week.sql\n      type  = \"line\"\n      width = 6\n    }\n\n    chart {\n      title = \"Average Max Daily CPU - Last 30 days\"\n      sql   = query.aws_ec2_instance_by_cpu_utilization_category.sql\n      type  = \"column\"\n      width = 6\n    }\n\n  }"
-    },
-    "aws_insights.dashboard.aws_ec2_instance_dashboard": {
-      "name": "aws_insights.dashboard.aws_ec2_instance_dashboard",
-      "title": "AWS EC2 Instance Dashboard",
-      "documentation": "This dashboard answers the following questions:\n\n- How many instances are in each account and region?\n- How many cores are allocated across all instances?\n- How many public instances are there?\n- How many instances do not have monitoring enabled?\n- How much do my instances cost each month?\n- What are my most used instances by CPU utilization?\n",
-      "tags": {
-        "service": "AWS/EC2",
-        "type": "Dashboard"
-      },
+    "sibling_containers_report.dashboard.sibling_containers_report": {
+      "name": "sibling_containers_report.dashboard.sibling_containers_report",
       "panel_type": "dashboard",
       "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "dashboard \"aws_ec2_instance_dashboard\" {\n\n  title         = \"AWS EC2 Instance Dashboard\"\n  documentation = file(\"./dashboards/ec2/docs/ec2_instance_dashboard.md\")\n\n  tags = merge(local.ec2_common_tags, {\n    type = \"Dashboard\"\n  })\n\n  container {\n\n    # Analysis\n    card {\n      sql   = query.aws_ec2_instance_count.sql\n      width = 2\n    }\n\n    card {\n      sql   = query.aws_ec2_instance_total_cores.sql\n      width = 2\n    }\n\n    # Assessments\n    card {\n      sql   = query.aws_ec2_public_instance_count.sql\n      width = 2\n      href  = dashboard.aws_ec2_instance_public_access_report.url_path\n    }\n\n    card {\n      sql   = query.aws_ec2_ebs_optimized_count.sql\n      width = 2\n    }\n\n    # Costs\n    card {\n      type  = \"info\"\n      icon  = \"currency-dollar\"\n      sql   = query.aws_ec2_instance_cost_mtd.sql\n      width = 2\n    }\n\n  }\n\n  container {\n\n    title = \"Assessments\"\n    width = 6\n\n    chart {\n      title = \"Public/Private\"\n      sql   = query.aws_ec2_instance_by_public_ip.sql\n      type  = \"donut\"\n      width = 4\n\n      series \"count\" {\n        point \"private\" {\n          color = \"ok\"\n        }\n        point \"public\" {\n          color = \"alert\"\n        }\n      }\n    }\n\n    chart {\n      title = \"EBS Optimized Status\"\n      sql   = query.aws_ec2_instance_ebs_optimized_status.sql\n      type  = \"donut\"\n      width = 4\n\n      series \"count\" {\n        point \"enabled\" {\n          color = \"ok\"\n        }\n        point \"disabled\" {\n          color = \"alert\"\n        }\n      }\n    }\n\n    chart {\n      title = \"Detailed Monitoring Status\"\n      sql   = query.aws_ec2_instance_detailed_monitoring_enabled.sql\n      type  = \"donut\"\n      width = 4\n\n      series \"count\" {\n        point \"enabled\" {\n          color = \"ok\"\n        }\n        point \"disabled\" {\n          color = \"alert\"\n        }\n      }\n    }\n  }\n\n  container {\n\n    title = \"Costs\"\n    width = 6\n\n\n    table {\n      width = 6\n      title = \"Forecast\"\n      sql   = query.aws_ec2_monthly_forecast_table.sql\n    }\n\n    chart {\n      width = 6\n      title = \"EC2 Compute Monthly Unblended Cost\"\n      type  = \"column\"\n      sql   = query.aws_ec2_instance_cost_per_month.sql\n    }\n\n  }\n\n  container {\n\n    title = \"Analysis\"\n\n    chart {\n      title = \"Instances by Account\"\n      sql   = query.aws_ec2_instance_by_account.sql\n      type  = \"column\"\n      width = 4\n    }\n\n    chart {\n      title = \"Instances by Region\"\n      sql   = query.aws_ec2_instance_by_region.sql\n      type  = \"column\"\n      width = 4\n    }\n\n    chart {\n      title = \"Instances by State\"\n      sql   = query.aws_ec2_instance_by_state.sql\n      type  = \"column\"\n      width = 4\n    }\n\n    chart {\n      title = \"Instances by Age\"\n      sql   = query.aws_ec2_instance_by_creation_month.sql\n      type  = \"column\"\n      width = 4\n    }\n\n    chart {\n      title = \"Instances by Type\"\n      sql   = query.aws_ec2_instance_by_type.sql\n      type  = \"column\"\n      width = 4\n    }\n\n  }\n\n  container {\n\n    title = \"Performance \u0026 Utilization\"\n\n    chart {\n      title = \"Top 10 CPU - Last 7 days\"\n      sql   = query.aws_ec2_top10_cpu_past_week.sql\n      type  = \"line\"\n      width = 6\n    }\n\n    chart {\n      title = \"Average Max Daily CPU - Last 30 days\"\n      sql   = query.aws_ec2_instance_by_cpu_utilization_category.sql\n      type  = \"column\"\n      width = 6\n    }\n\n  }\n\n}"
+      "dashboard": "dashboard.sibling_containers_report",
+      "source_definition": "dashboard \"sibling_containers_report\" {\n  container {\n    text {\n      value = \"container 1\"\n    }\n    chart {\n      title = \"container 1 chart 1\"\n      sql = \"select 1 as container\"\n    }\n  }\n\n  container {\n    text {\n      value = \"container 2\"\n    }\n    chart {\n      title = \"container 2 chart 1\"\n      sql = \"select 2 as container\"\n    }\n  }\n\n  container {\n    text {\n      value = \"container 3\"\n    }\n    chart {\n      title = \"container 3 chart 1\"\n      sql = \"select 3 as container\"\n    }\n  }\n}"
     },
-    "aws_insights.table.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_2_anonymous_table_0": {
-      "name": "aws_insights.table.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_2_anonymous_table_0",
-      "title": "Forecast",
-      "width": 6,
-      "sql": "with monthly_costs as (\n  select\n    period_start,\n    period_end,\n    case\n      when date_trunc('month', period_start) = date_trunc('month', CURRENT_DATE::timestamp) then 'Month to Date'\n      when date_trunc('month', period_start) = date_trunc('month', CURRENT_DATE::timestamp - interval '1 month') then 'Previous Month'\n      else to_char (period_start, 'Month')\n    end as period_label,\n    period_end::date - period_start::date as days,\n    sum(unblended_cost_amount)::numeric::money as unblended_cost_amount,\n    (sum(unblended_cost_amount) / (period_end::date - period_start::date ) )::numeric::money as average_daily_cost,\n    date_part('days', date_trunc ('month', period_start) + '1 MONTH'::interval  - '1 DAY'::interval ) as days_in_month,\n    sum(unblended_cost_amount) / (period_end::date - period_start::date ) * date_part('days', date_trunc ('month', period_start) + '1 MONTH'::interval  - '1 DAY'::interval )::numeric::money  as forecast_amount\n  from\n    aws_cost_by_service_monthly as c\n\n  where\n    service = 'Amazon Elastic Compute Cloud - Compute'\n    and date_trunc('month', period_start) \u003e= date_trunc('month', CURRENT_DATE::timestamp - interval '1 month')\n\n    group by\n    period_start,\n    period_end\n)\n\nselect\n  period_label as \"Period\",\n  unblended_cost_amount as \"Cost\",\n  average_daily_cost as \"Daily Avg Cost\"\nfrom\n  monthly_costs\n\nunion all\nselect\n  'This Month (Forecast)' as \"Period\",\n  (select forecast_amount from monthly_costs where period_label = 'Month to Date') as \"Cost\",\n  (select average_daily_cost from monthly_costs where period_label = 'Month to Date') as \"Daily Avg Cost\"\n\n",
-      "data": {
-        "columns": [
-          {
-            "name": "Period",
-            "data_type": "TEXT"
-          },
-          {
-            "name": "Cost",
-            "data_type": "790"
-          },
-          {
-            "name": "Daily Avg Cost",
-            "data_type": "790"
-          }
-        ],
-        "rows": [
-          {
-            "Cost": "$1.22",
-            "Daily Avg Cost": "$0.04",
-            "Period": "Previous Month"
-          },
-          {
-            "Cost": "$1.99",
-            "Daily Avg Cost": "$0.07",
-            "Period": "Month to Date"
-          },
-          {
-            "Cost": "$2.06",
-            "Daily Avg Cost": "$0.07",
-            "Period": "This Month (Forecast)"
-          }
-        ]
+    "sibling_containers_report.text.container_dashboard_sibling_containers_report_anonymous_container_0_anonymous_text_0": {
+      "name": "sibling_containers_report.text.container_dashboard_sibling_containers_report_anonymous_container_0_anonymous_text_0",
+      "properties": {
+        "value": "container 1"
       },
-      "properties": {},
-      "panel_type": "table",
+      "panel_type": "text",
       "status": "complete",
-      "dashboard": "dashboard.aws_ec2_instance_dashboard",
-      "source_definition": "    table {\n      width = 6\n      title = \"Forecast\"\n      sql   = query.aws_ec2_monthly_forecast_table.sql\n    }"
+      "dashboard": "dashboard.sibling_containers_report",
+      "source_definition": "    text {\n      value = \"container 1\"\n    }"
+    },
+    "sibling_containers_report.text.container_dashboard_sibling_containers_report_anonymous_container_1_anonymous_text_0": {
+      "name": "sibling_containers_report.text.container_dashboard_sibling_containers_report_anonymous_container_1_anonymous_text_0",
+      "properties": {
+        "value": "container 2"
+      },
+      "panel_type": "text",
+      "status": "complete",
+      "dashboard": "dashboard.sibling_containers_report",
+      "source_definition": "    text {\n      value = \"container 2\"\n    }"
+    },
+    "sibling_containers_report.text.container_dashboard_sibling_containers_report_anonymous_container_2_anonymous_text_0": {
+      "name": "sibling_containers_report.text.container_dashboard_sibling_containers_report_anonymous_container_2_anonymous_text_0",
+      "properties": {
+        "value": "container 3"
+      },
+      "panel_type": "text",
+      "status": "complete",
+      "dashboard": "dashboard.sibling_containers_report",
+      "source_definition": "    text {\n      value = \"container 3\"\n    }"
     }
   },
   "inputs": {},
@@ -700,104 +155,48 @@
     "test_aab",
     "internal"
   ],
-  "start_time": "2022-11-30T14:54:51.512734+05:30",
-  "end_time": "2022-11-30T14:54:55.059002+05:30",
+  "start_time": "2022-11-30T16:33:38.534713+05:30",
+  "end_time": "2022-11-30T16:33:38.585198+05:30",
   "layout": {
-    "name": "aws_insights.dashboard.aws_ec2_instance_dashboard",
+    "name": "sibling_containers_report.dashboard.sibling_containers_report",
     "children": [
       {
-        "name": "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_0",
+        "name": "sibling_containers_report.container.dashboard_sibling_containers_report_anonymous_container_0",
         "children": [
           {
-            "name": "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_0",
-            "panel_type": "card"
+            "name": "sibling_containers_report.text.container_dashboard_sibling_containers_report_anonymous_container_0_anonymous_text_0",
+            "panel_type": "text"
           },
           {
-            "name": "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_1",
-            "panel_type": "card"
-          },
-          {
-            "name": "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_2",
-            "panel_type": "card"
-          },
-          {
-            "name": "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_3",
-            "panel_type": "card"
-          },
-          {
-            "name": "aws_insights.card.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_0_anonymous_card_4",
-            "panel_type": "card"
-          }
-        ],
-        "panel_type": "container"
-      },
-      {
-        "name": "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_1",
-        "children": [
-          {
-            "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_1_anonymous_chart_0",
-            "panel_type": "chart"
-          },
-          {
-            "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_1_anonymous_chart_1",
-            "panel_type": "chart"
-          },
-          {
-            "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_1_anonymous_chart_2",
+            "name": "sibling_containers_report.chart.container_dashboard_sibling_containers_report_anonymous_container_0_anonymous_chart_0",
             "panel_type": "chart"
           }
         ],
         "panel_type": "container"
       },
       {
-        "name": "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_2",
+        "name": "sibling_containers_report.container.dashboard_sibling_containers_report_anonymous_container_1",
         "children": [
           {
-            "name": "aws_insights.table.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_2_anonymous_table_0",
-            "panel_type": "table"
+            "name": "sibling_containers_report.text.container_dashboard_sibling_containers_report_anonymous_container_1_anonymous_text_0",
+            "panel_type": "text"
           },
           {
-            "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_2_anonymous_chart_0",
+            "name": "sibling_containers_report.chart.container_dashboard_sibling_containers_report_anonymous_container_1_anonymous_chart_0",
             "panel_type": "chart"
           }
         ],
         "panel_type": "container"
       },
       {
-        "name": "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_3",
+        "name": "sibling_containers_report.container.dashboard_sibling_containers_report_anonymous_container_2",
         "children": [
           {
-            "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_0",
-            "panel_type": "chart"
+            "name": "sibling_containers_report.text.container_dashboard_sibling_containers_report_anonymous_container_2_anonymous_text_0",
+            "panel_type": "text"
           },
           {
-            "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_1",
-            "panel_type": "chart"
-          },
-          {
-            "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_2",
-            "panel_type": "chart"
-          },
-          {
-            "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_3",
-            "panel_type": "chart"
-          },
-          {
-            "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_3_anonymous_chart_4",
-            "panel_type": "chart"
-          }
-        ],
-        "panel_type": "container"
-      },
-      {
-        "name": "aws_insights.container.dashboard_aws_ec2_instance_dashboard_anonymous_container_4",
-        "children": [
-          {
-            "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_4_anonymous_chart_0",
-            "panel_type": "chart"
-          },
-          {
-            "name": "aws_insights.chart.container_dashboard_aws_ec2_instance_dashboard_anonymous_container_4_anonymous_chart_1",
+            "name": "sibling_containers_report.chart.container_dashboard_sibling_containers_report_anonymous_container_2_anonymous_chart_0",
             "panel_type": "chart"
           }
         ],
