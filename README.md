@@ -1,2 +1,2 @@
-# cgo-test
+# go-playground
 go testing
