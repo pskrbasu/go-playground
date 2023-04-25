@@ -9,11 +9,11 @@ import (
 func main() {
 	// Create an app somewhere.
 	// app := goshopify.App{
-	// 	ApiKey:    "a85458ebf7b2797e0516a0410481a15e",
-	// 	ApiSecret: "2694c8452c89896986063f1f69be11b2",
+	// 	ApiKey:    "",
+	// 	ApiSecret: "",
 	// }
 	// Create a new API client
-	client := goshopify.NewClient(goshopify.App{}, "test-turbot-pc-1", "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")
+	client := goshopify.NewClient(goshopify.App{}, "test-turbot-pc-1", "")
 	// Fetch the number of products
 	numProducts, err := client.Product.Count(nil)
 	if err != nil {
