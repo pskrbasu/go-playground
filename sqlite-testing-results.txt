@@ -1,0 +1,5532 @@
+
+Building plugin: aws
+
+go run generate/generator.go templates . aws 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_aws.so
+[
+  {
+    "steampipe_configure_aws(readfile('aws_creds'))": null
+  }
+]
+[
+  {
+    "title": "redhood-aaa"
+  }
+]
+
+Building plugin: gcp
+
+go run generate/generator.go templates . gcp 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_gcp.so
+[
+  {
+    "steampipe_configure_gcp(readfile('gcp_creds'))": null
+  }
+]
+[
+  {
+    "title": "parker-aaa"
+  }
+]
+
+Building plugin: aiven
+
+go run generate/generator.go templates . aiven 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_aiven.so
+[
+  {
+    "steampipe_configure_aiven(readfile('aiven_creds'))": null
+  }
+]
+
+Building plugin: auth0
+
+go run generate/generator.go templates . auth0 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_auth0.so
+[
+  {
+    "steampipe_configure_auth0(readfile('auth0_creds'))": null
+  }
+]
+
+Building plugin: azuredevops
+
+go run generate/generator.go templates . azuredevops 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_azuredevops.so
+[
+  {
+    "steampipe_configure_azuredevops(readfile('azuredevops_creds'))": null
+  }
+]
+
+Building plugin: consul
+
+go run generate/generator.go templates . consul 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_consul.so
+[
+  {
+    "steampipe_configure_consul(readfile('consul_creds'))": null
+  }
+]
+
+Building plugin: crtsh
+
+go run generate/generator.go templates . crtsh 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_crtsh.so
+[
+  {
+    "steampipe_configure_crtsh(readfile('crtsh_creds'))": null
+  }
+]
+[
+  {
+    "name": "C=AT, L=Wien, O=Makita Werkzeug Gesellschaft m.b.H., CN=Makita Werkzeug, emailAddress=sakai@makita.at"
+  },
+  {
+    "name": "C=AE, O=UAE Government, CN=ICA Root CA G4"
+  },
+  {
+    "name": "C=AE, O=UAE Government, CN=STG UAE Global Root CA G4 E2"
+  },
+  {
+    "name": "C=AE, O=UAE Government, CN=TEST Devices Certification Authority"
+  },
+  {
+    "name": "C=AE, O=UAE Government, CN=Test UAE Global Root CA G4 E2"
+  },
+  {
+    "name": "C=AE, O=UAE Government, CN=Timestamping Certification Authority"
+  },
+  {
+    "name": "C=AE, O=UAE Government, CN=Timestamping Certification Authority"
+  },
+  {
+    "name": "C=AE, O=UAE Government, CN=UAE Global Root CA G3"
+  },
+....
+]
+
+Building plugin: databricks
+
+go run generate/generator.go templates . databricks 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_databricks.so
+[
+  {
+    "steampipe_configure_databricks(readfile('databricks_creds'))": null
+  }
+]
+
+Building plugin: equinix
+
+go run generate/generator.go templates . equinix 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_equinix.so
+[
+  {
+    "steampipe_configure_equinix(readfile('equinix_creds'))": null
+  }
+]
+[
+  {
+    "name": "Test"
+  }
+]
+
+Building plugin: ibm
+
+go run generate/generator.go templates . ibm 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_ibm.so
+[
+  {
+    "steampipe_configure_ibm(readfile('ibm_creds'))": null
+  }
+]
+
+Building plugin: imap
+
+go run generate/generator.go templates . imap 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_imap.so
+[
+  {
+    "steampipe_configure_imap(readfile('imap_creds'))": null
+  }
+]
+
+Building plugin: launchdarkly
+
+go run generate/generator.go templates . launchdarkly 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_launchdarkly.so
+[
+  {
+    "steampipe_configure_launchdarkly(readfile('launchdarkly_creds'))": null
+  }
+]
+
+Building plugin: jumpcloud
+
+go run generate/generator.go templates . jumpcloud 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_jumpcloud.so
+[
+  {
+    "steampipe_configure_jumpcloud(readfile('jumpcloud_creds'))": null
+  }
+]
+[
+  {
+    "email": "dummy@turbot.com"
+  },
+  {
+    "email": "cody@turbot.com"
+  },
+  {
+    "email": "subhajit@turbot.com"
+  }
+]
+
+Building plugin: linkedin
+
+go run generate/generator.go templates . linkedin 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_linkedin.so
+[
+  {
+    "steampipe_configure_linkedin(readfile('linkedin_creds'))": null
+  }
+]
+
+Building plugin: mailchimp
+
+go run generate/generator.go templates . mailchimp 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_mailchimp.so
+[
+  {
+    "steampipe_configure_mailchimp(readfile('mailchimp_creds'))": null
+  }
+]
+
+Building plugin: mongodbatlas
+
+go run generate/generator.go templates . mongodbatlas 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_mongodbatlas.so
+[
+  {
+    "steampipe_configure_mongodbatlas(readfile('mongodbatlas_creds'))": null
+  }
+]
+[
+  {
+    "title": "Karan's Org - 2023-09-11"
+  }
+]
+
+Building plugin: salesforce
+
+go run generate/generator.go templates . salesforce 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_salesforce.so
+[
+  {
+    "steampipe_configure_salesforce(readfile('salesforce_creds'))": null
+  }
+]
+
+Building plugin: scaleway
+
+go run generate/generator.go templates . scaleway 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_scaleway.so
+[
+  {
+    "steampipe_configure_scaleway(readfile('scaleway_creds'))": null
+  }
+]
+[
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "ArchLinux"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Kapsule Base Node Image"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Kapsule Base Node Image"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Kapsule Base Node Image"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "ArchLinux"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "ArchLinux"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "ArchLinux"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Fedora 39"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Fedora 32"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Debian Bookworm"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 38"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu Jammy GPU OS 12 passthrough"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "ArchLinux"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "bionic-machine-learning-9.2-conda-1664899813"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "bionic-machine-learning-10.1-conda-1664899813"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Ubuntu 22.04 jammy"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "bionic-machine-learning-10.1-conda-1652291063"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "ArchLinux"
+  },
+  {
+    "name": "bionic-machine-learning-9.2-conda-1652291063"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "ArchLinux"
+  },
+  {
+    "name": "Ubuntu 22.04 jammy"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "bionic-machine-learning-10.1-conda-20220126"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 22.04 jammy"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "gitlab"
+  },
+  {
+    "name": "bionic-machine-learning-9.2-conda-1664899812"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "ArchLinux"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "CentOS 7"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "bionic-machine-learning-9.2-conda-1652291061"
+  },
+  {
+    "name": "bionic-machine-learning-10.1-conda-1652291062"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "bionic-machine-learning-10.1-conda-20220126"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "CentOS 8 Stream"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Ubuntu Focal GPU OS 11"
+  },
+  {
+    "name": "Ubuntu 22.04 jammy"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "Fedora 36"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "Fedora 37"
+  },
+  {
+    "name": "bionic-machine-learning-10.1-conda-1664899826"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "RockyLinux 9"
+  },
+  {
+    "name": "Ubuntu 22.04 Jammy Jellyfish"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "Centos Stream 9"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "Almalinux 9"
+  },
+  {
+    "name": "image_name"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "ownCloud"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Fedora 32"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Fedora 32"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "bionic-machine-learning-10.1-conda-1633072909"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "CentOS 7.6"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "OpenVPN"
+  },
+  {
+    "name": "Docker"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "GitLab"
+  },
+  {
+    "name": "WordPress"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Arch Linux"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu Bionic Beaver"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "ArchLinux"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "AlmaLinux 8"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Fedora 35"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Fedora 32"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Fedora 32"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "ArchLinux"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "openvpn"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "ArchLinux"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Fedora 34"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Fedora 34"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Fedora 32"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "bionic-machine-learning-10.1-conda-1633072908"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Fedora 32"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "wordpress"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Fedora 32"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "Debian Bullseye"
+  },
+  {
+    "name": "docker"
+  },
+  {
+    "name": "RockyLinux 8"
+  },
+  {
+    "name": "bionic-machine-learning-10.1-conda-1626765215"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 7.4"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian 10 Buster"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 18.04 Bionic Beaver"
+  },
+  {
+    "name": "Seedbox"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Ubuntu Bionic Beaver"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "LEMP"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Fedora 32"
+  },
+  {
+    "name": "WordPress"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Ubuntu Bionic Beaver"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Debian Buster"
+  },
+  {
+    "name": "Alpine Linux"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "bionic-machine-learning-10.1-conda-1594362759"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Docker"
+  },
+  {
+    "name": "WordPress"
+  },
+  {
+    "name": "Node.js LTS 8.x"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "Python"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "Ubuntu Bionic Beaver"
+  },
+  {
+    "name": "Fedora 29"
+  },
+  {
+    "name": "Arch Linux"
+  },
+  {
+    "name": "ownCloud"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Jessie"
+  },
+  {
+    "name": "nextcloud"
+  },
+  {
+    "name": "CentOS 7.6"
+  },
+  {
+    "name": "CentOS 7.4"
+  },
+  {
+    "name": "CentOS 7.4"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "Debian Jessie"
+  },
+  {
+    "name": "Java jdk10"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "GitLab"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "OpenVPN"
+  },
+  {
+    "name": "Fedora 28"
+  },
+  {
+    "name": "Ubuntu Bionic Beaver"
+  },
+  {
+    "name": "LEMP"
+  },
+  {
+    "name": "Ubuntu Xenial"
+  },
+  {
+    "name": "CentOS 7.4"
+  },
+  {
+    "name": "Prestashop"
+  },
+  {
+    "name": "Docker"
+  },
+  {
+    "name": "Seedbox"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "CentOS 8"
+  },
+  {
+    "name": "GOGS"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "OpenVPN"
+  },
+  {
+    "name": "Ubuntu 20.04 Focal Fossa"
+  },
+  {
+    "name": "mattermost"
+  },
+  {
+    "name": "Fedora 28"
+  },
+  {
+    "name": "CentOS 7.6"
+  },
+  {
+    "name": "Ruby"
+  },
+  {
+    "name": "Debian Stretch"
+  },
+  {
+    "name": "Docker"
+  },
+  {
+    "name": "Fedora 27"
+  }
+]
+
+Building plugin: snowflake
+
+go run generate/generator.go templates . snowflake 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_snowflake.so
+[
+  {
+    "steampipe_configure_snowflake(readfile('snowflake_creds'))": null
+  }
+]
+
+Building plugin: steampipe
+
+go run generate/generator.go templates . steampipe 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_steampipe.so
+[
+  {
+    "steampipe_configure_steampipe(readfile('steampipe_creds'))": null
+  }
+]
+[
+  {
+    "name": "francois2metz/gitguardian"
+  },
+  {
+    "name": "francois2metz/freshping"
+  },
+  {
+    "name": "francois2metz/ovh"
+  },
+  {
+    "name": "turbot/crowdstrike"
+  },
+  {
+    "name": "turbot/alicloud"
+  },
+  {
+    "name": "turbot/algolia"
+  },
+  {
+    "name": "turbot/ansible"
+  },
+  {
+    "name": "francois2metz/scalingo"
+  },
+  {
+    "name": "turbot/auth0"
+  },
+  {
+    "name": "turbot/crtsh"
+  },
+  {
+    "name": "gabrielsoltz/semgrep"
+  },
+  {
+    "name": "turbot/aws"
+  },
+  {
+    "name": "turbot/csv"
+  },
+  {
+    "name": "ip2location/ip2locationio"
+  },
+  {
+    "name": "turbot/awscfn"
+  },
+  {
+    "name": "turbot/databricks"
+  },
+  {
+    "name": "kaggrwal/bitfinex"
+  },
+  {
+    "name": "turbot/azure"
+  },
+  {
+    "name": "turbot/datadog"
+  },
+  {
+    "name": "marekjalovec/make"
+  },
+  {
+    "name": "turbot/azuread"
+  },
+  {
+    "name": "turbot/digitalocean"
+  },
+  {
+    "name": "mr-destructive/cohereai"
+  },
+  {
+    "name": "turbot/azuredevops"
+  },
+  {
+    "name": "turbot/docker"
+  },
+  {
+    "name": "solacelabs/solace"
+  },
+  {
+    "name": "theapsgroup/clickup"
+  },
+  {
+    "name": "turbot/dockerhub"
+  },
+  {
+    "name": "turbot/bitbucket"
+  },
+  {
+    "name": "theapsgroup/freshservice"
+  },
+  {
+    "name": "turbot/doppler"
+  },
+  {
+    "name": "turbot/buildkite"
+  },
+  {
+    "name": "theapsgroup/gitlab"
+  },
+  {
+    "name": "turbot/chaos"
+  },
+  {
+    "name": "turbot/duo"
+  },
+  {
+    "name": "theapsgroup/keycloak"
+  },
+  {
+    "name": "turbot/chaosdynamic"
+  },
+  {
+    "name": "turbot/env0"
+  },
+  {
+    "name": "theapsgroup/vault"
+  },
+  {
+    "name": "turbot/circleci"
+  },
+  {
+    "name": "turbot/equinix"
+  },
+  {
+    "name": "theapsgroup/vsphere"
+  },
+  {
+    "name": "turbot/cloudflare"
+  },
+  {
+    "name": "turbot/exec"
+  },
+  {
+    "name": "tomba-io/tomba"
+  },
+  {
+    "name": "turbot/fastly"
+  },
+  {
+    "name": "turbot/abuseipdb"
+  },
+  {
+    "name": "turbot/finance"
+  },
+  {
+    "name": "turbot/aiven"
+  },
+  {
+    "name": "turbot/fly"
+  },
+  {
+    "name": "turbot/code"
+  },
+  {
+    "name": "turbot/config"
+  },
+  {
+    "name": "turbot/gcp"
+  },
+  {
+    "name": "turbot/hibp"
+  },
+  {
+    "name": "turbot/hackernews"
+  },
+  {
+    "name": "turbot/hubspot"
+  },
+  {
+    "name": "turbot/grafana"
+  },
+  {
+    "name": "turbot/hcloud"
+  },
+  {
+    "name": "turbot/guardrails"
+  },
+  {
+    "name": "turbot/hypothesis"
+  },
+  {
+    "name": "turbot/godaddy"
+  },
+  {
+    "name": "ernw/openstack"
+  },
+  {
+    "name": "francois2metz/gandi"
+  },
+  {
+    "name": "francois2metz/baleen"
+  },
+  {
+    "name": "turbot/consul"
+  },
+  {
+    "name": "turbot/github"
+  },
+  {
+    "name": "turbot/heroku"
+  },
+  {
+    "name": "turbot/googledirectory"
+  },
+  {
+    "name": "turbot/googlesheets"
+  },
+  {
+    "name": "ellisvalentiner/confluence"
+  },
+  {
+    "name": "turbot/imap"
+  },
+  {
+    "name": "turbot/jenkins"
+  },
+  {
+    "name": "ellisvalentiner/weatherkit"
+  },
+  {
+    "name": "turbot/ibm"
+  },
+  {
+    "name": "turbot/ipinfo"
+  },
+  {
+    "name": "turbot/openshift"
+  },
+  {
+    "name": "turbot/microsoft365"
+  },
+  {
+    "name": "turbot/nomad"
+  },
+  {
+    "name": "turbot/onepassword"
+  },
+  {
+    "name": "turbot/openai"
+  },
+  {
+    "name": "turbot/mongodbatlas"
+  },
+  {
+    "name": "turbot/oci"
+  },
+  {
+    "name": "turbot/jira"
+  },
+  {
+    "name": "turbot/openapi"
+  },
+  {
+    "name": "turbot/namecheap"
+  },
+  {
+    "name": "turbot/jumpcloud"
+  },
+  {
+    "name": "turbot/okta"
+  },
+  {
+    "name": "turbot/net"
+  },
+  {
+    "name": "turbot/kubernetes"
+  },
+  {
+    "name": "turbot/linkedin"
+  },
+  {
+    "name": "turbot/newrelic"
+  },
+  {
+    "name": "turbot/ldap"
+  },
+  {
+    "name": "turbot/mailchimp"
+  },
+  {
+    "name": "turbot/linear"
+  },
+  {
+    "name": "turbot/mastodon"
+  },
+  {
+    "name": "turbot/ipstack"
+  },
+  {
+    "name": "francois2metz/airtable"
+  },
+  {
+    "name": "turbot/launchdarkly"
+  },
+  {
+    "name": "turbot/linode"
+  },
+  {
+    "name": "turbot/googleworkspace"
+  },
+  {
+    "name": "turbot/rss"
+  },
+  {
+    "name": "turbot/shopify"
+  },
+  {
+    "name": "turbot/turbot"
+  },
+  {
+    "name": "turbot/zoom"
+  },
+  {
+    "name": "turbot/pagerduty"
+  },
+  {
+    "name": "turbot/salesforce"
+  },
+  {
+    "name": "turbot/slack"
+  },
+  {
+    "name": "turbot/twilio"
+  },
+  {
+    "name": "turbot/panos"
+  },
+  {
+    "name": "turbot/scaleway"
+  },
+  {
+    "name": "turbot/twitter"
+  },
+  {
+    "name": "turbot/snowflake"
+  },
+  {
+    "name": "turbot/pipes"
+  },
+  {
+    "name": "turbot/sentry"
+  },
+  {
+    "name": "turbot/updown"
+  },
+  {
+    "name": "turbot/splunk"
+  },
+  {
+    "name": "turbot/planetscale"
+  },
+  {
+    "name": "turbot/servicenow"
+  },
+  {
+    "name": "turbot/uptimerobot"
+  },
+  {
+    "name": "turbot/steampipe"
+  },
+  {
+    "name": "turbot/prometheus"
+  },
+  {
+    "name": "turbot/shodan"
+  },
+  {
+    "name": "turbot/urlscan"
+  },
+  {
+    "name": "turbot/steampipecloud"
+  },
+  {
+    "name": "turbot/reddit"
+  },
+  {
+    "name": "turbot/vanta"
+  },
+  {
+    "name": "turbot/terraform"
+  },
+  {
+    "name": "turbot/trello"
+  },
+  {
+    "name": "turbot/tfe"
+  },
+  {
+    "name": "turbot/stripe"
+  },
+  {
+    "name": "turbot/vercel"
+  },
+  {
+    "name": "turbot/trivy"
+  },
+  {
+    "name": "turbot/wiz"
+  },
+  {
+    "name": "turbot/supabase"
+  },
+  {
+    "name": "turbot/workos"
+  },
+  {
+    "name": "turbot/virustotal"
+  },
+  {
+    "name": "turbot/tailscale"
+  },
+  {
+    "name": "turbot/whois"
+  },
+  {
+    "name": "turbot/zendesk"
+  }
+]
+
+Building plugin: supabase
+
+go run generate/generator.go templates . supabase 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_supabase.so
+[
+  {
+    "steampipe_configure_supabase(readfile('supabase_creds'))": null
+  }
+]
+[
+  {
+    "name": "Steampipe"
+  },
+  {
+    "name": "Steampunk"
+  }
+]
+
+Building plugin: trello
+
+go run generate/generator.go templates . trello 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_trello.so
+[
+  {
+    "steampipe_configure_trello(readfile('trello_creds'))": null
+  }
+]
+
+Building plugin: twitter
+
+go run generate/generator.go templates . twitter 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_twitter.so
+[
+  {
+    "steampipe_configure_twitter(readfile('twitter_creds'))": null
+  }
+]
+
+Building plugin: uptimerobot
+
+go run generate/generator.go templates . uptimerobot 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_uptimerobot.so
+[
+  {
+    "steampipe_configure_uptimerobot(readfile('uptimerobot_creds'))": null
+  }
+]
+[
+  {
+    "email": "sourav@turbot.com"
+  }
+]
+
+Building plugin: zoom
+
+go run generate/generator.go templates . zoom 
+4
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/go.mod.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/main.go.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/Makefile.tmpl
+filePath: /Users/pskrbasu/turbot-delivery/Steampipe/steampipe-sqlite-extension/templates/out/README.md.tmpl
+go mod tidy
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f out/Makefile build
+go build -tags "netgo" -buildmode=c-shared -o steampipe_sqlite_zoom.so
+[
+  {
+    "steampipe_configure_zoom(readfile('zoom_creds'))": null
+  }
+]
+[
+  {
+    "email": "bob@turbot.com"
+  },
+  {
+    "email": "abhinash@turbot.com"
+  },
+  {
+    "email": "adyasha@turbot.com"
+  },
+  {
+    "email": "raj@turbot.com"
+  },
+  {
+    "email": "matt@turbot.com"
+  },
+  {
+    "email": "nathan@turbot.com"
+  },
+  {
+    "email": "joe@turbot.com"
+  },
+  {
+    "email": "charles.johnston@turbot.com"
+  },
+  {
+    "email": "turbotindia@turbot.com"
+  },
+  {
+    "email": "david.boeke@turbot.com"
+  }
+]
