@@ -19,11 +19,11 @@ jobs:
         run: go run main.go
 
       - name: go build
-        run: go build -o cgo-app main.go
+        run: go build -tags 'netgo' -o cgo-app-netgo main.go
 
       - name: Save built app
         uses: actions/upload-artifact@v3
         with:
-          name: cgo-app
-          path: cgo-app
+          name: cgo-app-netgo
+          path: cgo-app-netgo
           if-no-files-found: error
