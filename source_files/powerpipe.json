@@ -1,0 +1,29 @@
+[
+  {
+    "auto_generated": false,
+    "dashboard": "net_insights.dashboard.dns_records_report",
+    "description": null,
+    "documentation": null,
+    "end_line_number": 22,
+    "file_name": "/Users/pskrbasu/turbot-delivery/Steampipe/steampipe-mod-net-insights/dashboards/dns_records_report.sp",
+    "is_anonymous": false,
+    "mod_name": "net_insights",
+    "path": [
+      [
+        "mod.net_insights",
+        "net_insights.dashboard.dns_records_report",
+        "net_insights.input.domain_name_input"
+      ]
+    ],
+    "placeholder": "example.com",
+    "qualified_name": "net_insights.input.domain_name_input",
+    "resource_name": "domain_name_input",
+    "source_definition": "  input \"domain_name_input\" {\n    title       = \"Enter a domain:\"\n    width       = 4\n    type        = \"text\"\n    placeholder = \"example.com\"\n  }",
+    "start_line_number": 17,
+    "tags": null,
+    "title": "Enter a domain:",
+    "type": "text",
+    "unqualified_name": "input.domain_name_input",
+    "width": 4
+  }
+]

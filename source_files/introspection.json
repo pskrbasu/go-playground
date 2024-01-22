@@ -1,0 +1,71 @@
+[
+  {
+   "column_name": "type"
+  },
+  {
+   "column_name": "end_line_number"
+  },
+  {
+   "column_name": "description"
+  },
+  {
+   "column_name": "args"
+  },
+  {
+   "column_name": "qualified_name"
+  },
+  {
+   "column_name": "title"
+  },
+  {
+   "column_name": "path"
+  },
+  {
+   "column_name": "width"
+  },
+  {
+   "column_name": "label"
+  },
+  {
+   "column_name": "mod_name"
+  },
+  {
+   "column_name": "placeholder"
+  },
+  {
+   "column_name": "query"
+  },
+  {
+   "column_name": "resource_name"
+  },
+  {
+   "column_name": "documentation"
+  },
+  {
+   "column_name": "params"
+  },
+  {
+   "column_name": "start_line_number"
+  },
+  {
+   "column_name": "tags"
+  },
+  {
+   "column_name": "dashboard"
+  },
+  {
+   "column_name": "source_definition"
+  },
+  {
+   "column_name": "file_name"
+  },
+  {
+   "column_name": "sql"
+  },
+  {
+   "column_name": "is_anonymous"
+  },
+  {
+   "column_name": "auto_generated"
+  }
+ ]
